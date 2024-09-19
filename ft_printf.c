@@ -6,7 +6,7 @@
 /*   By: mmravec <mmravec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:27:51 by mmravec           #+#    #+#             */
-/*   Updated: 2024/09/19 18:59:46 by mmravec          ###   ########.fr       */
+/*   Updated: 2024/09/19 21:12:49 by mmravec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	print_format(char conversion, va_list *ap)
 		count += print_pointer(va_arg(*ap, void *));
 	else
 		count += write(1, &conversion, 1);
-
 	return (count);
 }
 
@@ -65,32 +64,25 @@ int	ft_printf(const char *format, ...)
 //     int     count;
 //     int     x = 42;
 //     int     *ptr = &x;
-
 //     count = ft_printf("Hello %s!\n", "John");
 //     ft_printf("Chars written are: %d\n", count);
-
 //     count = ft_printf("%X\n", 42);
 //     ft_printf("Chars written are: %d\n", count);
-
 //     count = ft_printf("%u\n", -10);  // Be careful with unsigned numbers
 //     ft_printf("Chars written are: %d\n", count);
-
 //     // Testing %p conversion
 //     count = ft_printf("Pointer to x: %p\n", (void*)ptr);
 //     ft_printf("Chars written are: %d\n", count);
-
 //     // Testing NULL pointer
 //     count = ft_printf("NULL pointer: %p\n", NULL);
 //     ft_printf("Chars written are: %d\n", count);
-
 // 	count = ft_printf(" %c \n", '1');
 // 	ft_printf("Chars written are: %d\n", count);
-
 // 	count = ft_printf(" %c %c %c \n", '1', 0, '3');
 // 	ft_printf("Chars written are: %d\n", count);
-
-// 	ft_printf(" %p %p \n", (void*)(uintptr_t)LONG_MIN, (void*)(uintptr_t)LONG_MAX);  // Safe cast to uintptr_t
-// 	ft_printf(" %p %p \n", (void*)(uintptr_t)ULONG_MAX, (void*)(uintptr_t)(-ULONG_MAX));  // Safe cast to uintptr_t
-
+// 	ft_printf(" %p %p \n", (void*)(uintptr_t)LONG_MIN,
+//		(void*)(uintptr_t)LONG_MAX);
+// 	ft_printf(" %p %p \n", (void*)(uintptr_t)ULONG_MAX,
+//		(void*)(uintptr_t)(-ULONG_MAX));
 //     return 0;
 // }

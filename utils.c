@@ -6,7 +6,7 @@
 /*   By: mmravec <mmravec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:55:45 by mmravec           #+#    #+#             */
-/*   Updated: 2024/09/19 18:58:18 by mmravec          ###   ########.fr       */
+/*   Updated: 2024/09/19 21:13:19 by mmravec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,8 @@ int	print_unsigned_digit(unsigned long long n, int base, char *symbols)
 	}
 	while (--i >= 0)
 		count += print_char(buffer[i]);
-
 	return (count);
 }
-
 
 int	print_pointer(void *p)
 {
