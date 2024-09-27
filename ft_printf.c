@@ -6,7 +6,7 @@
 /*   By: mmravec <mmravec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 13:27:51 by mmravec           #+#    #+#             */
-/*   Updated: 2024/09/19 21:12:49 by mmravec          ###   ########.fr       */
+/*   Updated: 2024/09/26 21:33:55 by mmravec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,18 @@ int	ft_printf(const char *format, ...)
 }
 
 // #include <limits.h>
+// #include <stdio.h>
 
 // int main(void)
 // {
 //     int     count;
 //     int     x = 42;
 //     int     *ptr = &x;
-//     count = ft_printf("Hello %s!\n", "John");
+// 	char	*name = "Ka\b\atka";
+
+//     count = ft_printf("Hello\n\t\v %s!\n", name);
+// 	ft_printf("Chars written are: %d\n", count);
+// 	count = printf("Hello\n\t\v %s!\n", name);
 //     ft_printf("Chars written are: %d\n", count);
 //     count = ft_printf("%X\n", 42);
 //     ft_printf("Chars written are: %d\n", count);
@@ -80,9 +85,9 @@ int	ft_printf(const char *format, ...)
 // 	ft_printf("Chars written are: %d\n", count);
 // 	count = ft_printf(" %c %c %c \n", '1', 0, '3');
 // 	ft_printf("Chars written are: %d\n", count);
-// 	ft_printf(" %p %p \n", (void*)(uintptr_t)LONG_MIN,
-//		(void*)(uintptr_t)LONG_MAX);
-// 	ft_printf(" %p %p \n", (void*)(uintptr_t)ULONG_MAX,
-//		(void*)(uintptr_t)(-ULONG_MAX));
+// 	ft_printf(" %p %p \n", (void*)(unsigned long int)LONG_MIN,
+// 		(void*)(unsigned long int)LONG_MAX);
+// 	ft_printf(" %p %p \n", (void*)(unsigned long int)ULONG_MAX,
+// 		(void*)(unsigned long int)(-ULONG_MAX));
 //     return 0;
 // }

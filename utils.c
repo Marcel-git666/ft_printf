@@ -6,7 +6,7 @@
 /*   By: mmravec <mmravec@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:55:45 by mmravec           #+#    #+#             */
-/*   Updated: 2024/09/19 21:13:19 by mmravec          ###   ########.fr       */
+/*   Updated: 2024/09/26 15:11:23 by mmravec          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ int	print_string(char *s)
 		return (write(1, "(null)", 6));
 	while (*s)
 	{
-		if (*s >= 32 && *s <= 126)
-			count += write(1, s, 1);
+		count += write(1, s, 1);
 		s++;
 	}
 	return (count);
@@ -74,11 +73,13 @@ int	print_unsigned_digit(unsigned long long n, int base, char *symbols)
 
 int	print_pointer(void *p)
 {
-	int			count;
-	uintptr_t	address;
+	int					count;
+	unsigned long int	address;
 
-	address = (uintptr_t)p;
 	count = 0;
+	if (p == NULL)
+		return (write(1, "(nil)", 5));
+	address = (unsigned long int)p;
 	count += write(1, "0x", 2);
 	count += print_unsigned_digit(address, 16, "0123456789abcdef");
 	return (count);
