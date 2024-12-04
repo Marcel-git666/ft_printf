@@ -6,14 +6,14 @@
 #    By: mmravec <mmravec@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 22:02:38 by mmravec           #+#    #+#              #
-#    Updated: 2024/09/26 11:35:27 by mmravec          ###   ########.fr        #
+#    Updated: 2024/12/04 14:29:24 by mmravec          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-SRCS = ft_printf.c utils.c
+SRCS = ft_printf.c ft_printf_utils.c
 OBJS = $(SRCS:.c=.o)      # Object files corresponding to .c files
 
 
